@@ -1,0 +1,5 @@
+<form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+    <label>Email</label> <br> 
+  <input type="email" formControlName="email" placeholder="Votre email" required>
+  <button type="submit">Se connecter</button>
+</form>

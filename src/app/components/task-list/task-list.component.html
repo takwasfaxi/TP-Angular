@@ -1,0 +1,19 @@
+<div class="header">
+  <h2>Liste des tâches</h2>
+  <button class="logout-btn" (click)="logoutUser()">Déconnexion</button>
+</div>
+
+
+<app-task-form [editTask]="selectedTask"></app-task-form>
+
+<!-- Liste des tâches -->
+<div *ngFor="let task of tasks$ | async" 
+     class="task-item" 
+     [class.completed]="task.completed">
+  <h3>{{ task.title }} (Priorité: {{ task.priority }})</h3>
+  <p>{{ task.description }}</p>
+  <p>{{ task.dueDate | date }}</p>
+  <button (click)="onToggle(task.id)">Valider</button>
+  <button (click)="onEdit(task)">Modifier</button>
+  <button (click)="onDelete(task.id)">Supprimer</button>
+</div>

@@ -1,0 +1,7 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="title" placeholder="Titre" required>
+  <textarea formControlName="description" placeholder="Description"></textarea>
+  <input type="number" formControlName="priority" min="1" max="5" placeholder="Priorité" required>
+  <input type="date" formControlName="dueDate" required>
+  <button type="submit">{{ isEditMode ? 'Modifier' : 'Ajouter' }}</button>
+</form>
