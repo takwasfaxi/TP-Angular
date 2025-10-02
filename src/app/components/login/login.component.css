@@ -1,55 +1,75 @@
-/* login.component.css */
-
-/* Centrer le formulaire sur la page */
-form {
-  width: 300px;
-  margin: 100px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Style global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Style du label */
-label {
+/* Conteneur du formulaire */
+form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Titre */
+form h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Labels */
+form label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* Champs de saisie */
+form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* Effet focus */
+form input:focus {
+  outline: none;
+  border-color: #ff5e62;
+  box-shadow: 0 0 5px rgba(255, 94, 98, 0.5);
+}
+
+/* Bouton */
+form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-/* Style des inputs */
-input[type="email"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* Style du bouton */
-button {
-  padding: 10px;
   border: none;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #ff7f50, #ff4500);
-  color: white;
-  font-weight: bold;
+  border-radius: 0.8rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-/* Effet au survol du bouton */
-button:hover {
-  background: linear-gradient(45deg, #ff6347, #ff3300);
-}
-
-/* Responsive */
-@media (max-width: 400px) {
-  form {
-    width: 90%;
-    padding: 20px;
-  }
+/* Effet hover */
+form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
 }

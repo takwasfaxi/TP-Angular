@@ -1,7 +1,7 @@
-<div class="header">
-  <h2>Liste des tâches</h2>
-  <button class="logout-btn" (click)="logoutUser()">Déconnexion</button>
-</div>
+
+  <h2>My Tasks</h2>
+  
+
 
 
 <app-task-form [editTask]="selectedTask"></app-task-form>
@@ -13,7 +13,13 @@
   <h3>{{ task.title }} (Priorité: {{ task.priority }})</h3>
   <p>{{ task.description }}</p>
   <p>{{ task.dueDate | date }}</p>
-  <button (click)="onToggle(task.id)">Valider</button>
-  <button (click)="onEdit(task)">Modifier</button>
-  <button (click)="onDelete(task.id)">Supprimer</button>
+  <button (click)="onToggle(task.id)">Validate</button>
+  <button (click)="onEdit(task)">Update</button>
+  <button (click)="onDelete(task.id)">Delete</button>
+  
+  
 </div>
+<div class="header">
+    <button class="logout-btn" (click)="logoutUser()">Disconnect</button>
+
+  </div>

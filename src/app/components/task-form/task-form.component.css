@@ -1,16 +1,84 @@
+/* Style global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Conteneur du formulaire */
 form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 1rem;
 }
 
-input, textarea, button {
-  padding: 8px;
-  font-size: 14px;
+/* Champs texte et number */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
 }
 
-button {
-  width: 120px;
+/* Zone de description */
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Effet focus */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+  background-color: #fff;
+}
+
+/* Bouton */
+form button {
+  padding: 1rem;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.8rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Effet hover bouton */
+form button:hover {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+  form button {
+    font-size: 1rem;
+    padding: 0.9rem;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+  }
 }
